@@ -1,0 +1,16 @@
+type Product {
+    sku: String
+    name: String
+    description: String
+}
+
+type ProductList {
+    items: [Product]
+    nextToken: String
+}
+
+type Query {
+    Product(sku: String): Product
+    Products(limit: Int, nextToken: String): ProductList
+}
+

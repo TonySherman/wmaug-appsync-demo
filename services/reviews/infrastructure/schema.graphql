@@ -1,0 +1,10 @@
+type ProductReview {
+    sku: String
+    rating: Int
+    review: String
+    author: String
+}
+
+type Query {
+    ProductReviews(sku: String!): [ProductReview]
+}

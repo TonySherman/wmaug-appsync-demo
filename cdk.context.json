@@ -1,0 +1,62 @@
+{
+  "availability-zones:account=316542010727:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ],
+  "vpc-provider:account=316542010727:filter.isDefault=true:region=us-east-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-d7d713aa",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "316542010727",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-53dca41e",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-1a",
+            "routeTableId": "rtb-58571426"
+          },
+          {
+            "subnetId": "subnet-fd3386a2",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-1b",
+            "routeTableId": "rtb-58571426"
+          },
+          {
+            "subnetId": "subnet-8b8c24ed",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-1c",
+            "routeTableId": "rtb-58571426"
+          },
+          {
+            "subnetId": "subnet-4f18af6e",
+            "cidr": "172.31.80.0/20",
+            "availabilityZone": "us-east-1d",
+            "routeTableId": "rtb-58571426"
+          },
+          {
+            "subnetId": "subnet-5daa556c",
+            "cidr": "172.31.48.0/20",
+            "availabilityZone": "us-east-1e",
+            "routeTableId": "rtb-58571426"
+          },
+          {
+            "subnetId": "subnet-5099fb5e",
+            "cidr": "172.31.64.0/20",
+            "availabilityZone": "us-east-1f",
+            "routeTableId": "rtb-58571426"
+          }
+        ]
+      }
+    ]
+  },
+  "ssm:account=316542010727:parameterName=merged_api_id:region=us-east-1": "md335usojbbp3fu4hehwgfu3fy",
+  "ssm:account=316542010727:parameterName=merged_api_role_name:region=us-east-1": "merged-api-stack-mergedapiexecutionrole57EE7AC7-dvC88gVEwCL9"
+}

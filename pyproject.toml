@@ -1,0 +1,14 @@
+[project]
+name = "wmaug-appsync-talk"
+version = "0.1.0"
+description = "Example AWS AppSync Demo"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aws-cdk-lib>=2.171.0",
+    "cdk-klayers>=0.3.0",
+    "psycopg2-binary>=2.9.10",
+]
+
+[dependency-groups]
+dev = []
