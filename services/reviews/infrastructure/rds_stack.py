@@ -106,3 +106,5 @@ class RdsStack(Stack):
 
         CfnOutput(self, "instance-id", value=ssm_instance.instance_id, export_name="ssm-instance-id")
         CfnOutput(self, "cluster-endpoint", value=self.rds_cluster.cluster_endpoint.hostname, export_name="rds-cluster-endpoint")
+        CfnOutput(self, "rds-secrets", value=self.rds_secrets.secret_name, export_name="rds-secrets")
+

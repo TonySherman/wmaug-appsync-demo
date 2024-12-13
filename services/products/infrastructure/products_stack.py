@@ -23,6 +23,7 @@ class ProductsStack(Stack):
                 type=aws_dynamodb.AttributeType.STRING,
             ),
             billing_mode=aws_dynamodb.BillingMode.PAY_PER_REQUEST,
+            removal_policy=aws_cdk.RemovalPolicy.DESTROY,
         )
 
         aws_cdk.CfnOutput(self, "products_table_name", value=products_table.table_name, export_name="productsTableName")

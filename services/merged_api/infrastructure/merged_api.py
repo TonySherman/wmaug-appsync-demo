@@ -1,4 +1,4 @@
-from aws_cdk import Environment, Stack, aws_appsync, aws_iam, aws_ssm
+from aws_cdk import Environment, Stack, Tags, aws_appsync, aws_iam, aws_ssm
 from constructs import Construct
 
 
@@ -10,6 +10,8 @@ class MergedApiStack(Stack):
         env: Environment,
     ) -> None:
         super().__init__(scope, id, env=env)
+
+        Tags.of(self).add("project", "wmaug-dec-2024-appsync")
 
         merged_api_role = aws_iam.Role(
             self,

@@ -51,6 +51,7 @@ class ManageDatabaseLambda(Construct):
                 "PARAMETERS_SECRETS_EXTENSION_HTTP_PORT": "2773",
             },
             timeout=Duration.minutes(10),
+            memory_size=1024,
         )
 
         rds_creds.grant_read(self.db_manager_lambda)

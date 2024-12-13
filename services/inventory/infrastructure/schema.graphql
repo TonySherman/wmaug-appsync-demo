@@ -1,0 +1,12 @@
+type ProductCount {
+    sku: String!
+    available_count: Int
+}
+
+type Query {
+    getInventory(sku: String): ProductCount
+}
+
+type Mutation {
+	updateInventory(sku: String!, count: Int!, admin_key: String!): ProductCount
+}
