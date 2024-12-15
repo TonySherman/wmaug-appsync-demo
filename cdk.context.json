@@ -2,5 +2,13 @@
   "ssm:account=145023128664:parameterName=merged_api_id:region=us-east-1": "r3mjdk6k7ndctiflzzkh4i3g74",
   "ssm:account=145023128664:parameterName=merged_api_role_name:region=us-east-1": "merged-api-stack-mergedapiexecutionrole57EE7AC7-jm8PQQivZIEj",
   "ssm:account=316542010727:parameterName=merged_api_id:region=us-east-1": "md335usojbbp3fu4hehwgfu3fy",
-  "ssm:account=316542010727:parameterName=merged_api_role_name:region=us-east-1": "merged-api-stack-mergedapiexecutionrole57EE7AC7-dvC88gVEwCL9"
+  "ssm:account=316542010727:parameterName=merged_api_role_name:region=us-east-1": "merged-api-stack-mergedapiexecutionrole57EE7AC7-dvC88gVEwCL9",
+  "availability-zones:account=316542010727:region=us-east-1": [
+    "us-east-1a",
+    "us-east-1b",
+    "us-east-1c",
+    "us-east-1d",
+    "us-east-1e",
+    "us-east-1f"
+  ]
 }

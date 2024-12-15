@@ -6,5 +6,5 @@ type ProductReview {
 }
 
 type Query {
-    ProductReviews(sku: String!): [ProductReview]
+    getProductReviews(sku: String!): [ProductReview]
 }

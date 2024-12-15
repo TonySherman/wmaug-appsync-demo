@@ -1,4 +1,4 @@
-from aws_cdk import CfnOutput, Stack, aws_ec2, aws_iam, aws_rds, custom_resources
+from aws_cdk import CfnOutput, Stack, aws_ec2, aws_iam, aws_rds, custom_resources, Tags
 from constructs import Construct
 
 from services.reviews.src.manage_database.infrastructure import ManageDatabaseLambda
@@ -12,6 +12,8 @@ class RdsStack(Stack):
         **kwargs,
     ) -> None:
         super().__init__(scope, id, **kwargs)
+
+        Tags.of(self).add("project", "wmaug-dec-2024-appsync")
 
         vpc = aws_ec2.Vpc(self, "aurora-vpc")
 
