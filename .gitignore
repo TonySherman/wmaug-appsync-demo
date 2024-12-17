@@ -12,3 +12,6 @@ wheels/
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+app.py
+cdk.context.json
+

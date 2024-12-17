@@ -6,6 +6,9 @@ class:
 ---
 # AWS AppSync GraphQL APIs
 
+![w:400px](./qrcode.png)
+Link to GitHub repo with example code (https://github.com/TonySherman/wmaug-appsync-demo)
+
 
 ---
 # GraphQL vs REST
