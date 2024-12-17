@@ -17,6 +17,9 @@ class:
     - Strict schema helps with this
     - You don't need to know how your backend implements the API
 
+<!--
+Won't cover AppSync Events or Subscriptions this talk
+-->
 ---
 # GraphQL on AWS
 

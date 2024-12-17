@@ -1,18 +1,15 @@
 # WMAUG December 2024 AWS AppSync Demo
 
-This project contains example code and infrastructure that represents an e-commerce solution. The main objective is to 
-highlight AWS AppSync GraphQL APIs and how they can be used to access several different AWS datasources. All individual
-APIs are then merged into a single API that can provide access to all datasources from a single graphQL endpoint.
-
 ## Project Structure
 
 This is a demo monorepo that represents a minimal e-commerce platform that is broken into
 several different microservices:
 
- - Products
- - Orders
- - Inventory
- - Reviews
+ - [Products](services/products/README.md)
+ - [Inventory](services/inventory/README.md)
+ - [Reviews](services/reviews/README.md)
+ - [Merged API](services/merged_api/README.md)
+ - [Frontend](services/frontend/README.md)
 
 The goal is to show how these services can be accessed via a single AppSync GraphQL API.
 
@@ -30,12 +27,17 @@ You also need to have AWS CDK installed to deploy `npm install -g aws-cdk`
 
 ## Deploying
 
-In Microservice fashion, each service will need to be deployed independently. They are designed that each service
-can be deployed and updated in any order with one exception, the merged_api needs to be deployed first since every
-other service creates graphQL APIs that are merged into the merged API.
+Since this repo is representative of various Microservices, each service is designed to be worked on
+and deployed independently. The only prerequisite to deploying any individual service is to deploy
+the merged_api stack first. 
 
-Each service has an `app.py` file that you can point cdk at to deploy:
-`cdk deploy -a 'python -m services.merged_api.app --all`
+Each service can be deployed right from the root of the repo by specifying the service:
+`cdk deploy -a 'python -m services.merged_api.app' --profile <aws cli profile name>`
 
-### Seed Data
 
+## Seed Databases 
+
+This example depends on data being associated with a single SKU across the various service. There is 
+a script that you can run to generate some dummy data to query.
+
+`AWS_PROFILE=<profile name> python -m 'scripts.seed_data'`
