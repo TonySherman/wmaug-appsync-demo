@@ -38,6 +38,16 @@ Each service can be deployed right from the root of the repo by specifying the s
 ## Seed Databases 
 
 This example depends on data being associated with a single SKU across the various service. There is 
-a script that you can run to generate some dummy data to query.
+a script that you can run to generate some dummy data to query. The script does connect to the RDS database 
+via localhost, so you will need to use SSM port forwarding to allow for the local connection.
+
+
+```bash
+aws ssm start-session \
+--document-name AWS-StartPortForwardingSessionToRemoteHost \
+--parameters '{"host":["<cluster-endpoint-url>"], "portNumber":["5432"], "localPortNumber":["5432"]}' \
+--target <ec2 instance id> \
+--profile <aws cli profile name>
+```
 
 `AWS_PROFILE=<profile name> python -m 'scripts.seed_data'`
